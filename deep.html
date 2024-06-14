@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <a href="index.html">1</a>
+    <a href="main.html">2</a>
+    <a href="Q1.html">3</a>
+    <a href="Q2.html">4</a>
+    <a href="Q3.html">5</a>
+
+
+    <form id="checkListForm">
+        <input type="text" placeholder="name" id="name"> <br/> <br/>
+       
+        <input type="radio" value="male" name="gender">
+        <label>Male</label> <br>
+        
+        <input type="radio" value="female" name="gender">
+        <label>Female</label> <br>
+        <input type="range" name="range" min="1" max="100" value="100" id="myRange"> <br> <br>
+
+        <input type="date" name="date" id="date"> <br><br>
+
+        <label>Select your hobby</label>
+
+        <select name="" id="hobby">
+            <option value="">AI</option>
+            <option value="">Ml</option>
+        
+        </select>
+        <input type="submit" onclick="get()">
+    </form>
+
+
+    <script>
+        function get(){
+
+            event.preventDefault(); // it prevent form to refresh
+
+            const genderItem = [];
+
+            const name = document.getElementById('name').value;
+
+            console.log(name);
+
+            const gender = document.querySelectorAll('input[name="gender"]:checked');
+
+            gender.forEach((el)=>{
+                genderItem.push(el.value);
+            })
+
+            const range = document.getElementById('myRange').value;
+
+            const date = document.getElementById('date').value ; 
+
+         const show = document.getElementById('show');
+          show.innerHTML = `
+          <p>${range}</p>
+          <p>${date}</p>
+          <p>${hobby}</p>
+          `
+        
+
+        
+
+        }
+    </script>
+
+</body>
+</html>

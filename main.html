@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="name" id="name"> <br><br>
+    <label for="">mail</label>
+    <input type="radio" name="mail" value="male"  id="mail">
+    <label for="">femail</label>
+    <input type="radio" name="femail" value="female"  id="femail">
+
+     <input type="button" name="button" onclick="get()">
+
+
+     <script>
+        function get(){
+            event.preventDefault(); // it prevent form to refresh
+
+            const name = document.getElementById('name').value;
+
+            console.log(name);
+
+            const gender = document.querySelectorAll('input[name="gender"]:checked');
+
+            gender.forEach((el)=>
+        genderItem
+    )
+        }
+     </script>
+</body>
+</html>
